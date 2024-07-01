@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* this remove the (white) top margin that was still
+appearing after apply this style to body instead of '*' */
+* {
+    margin: 0;
+    padding: 0;
+}
+/*--------------------------------------------------------*/
+/* top section */
+/*navigation*/
+.section-top {
+    box-sizing: border-box;
+    background: #1f2937;
+    /*height: 530px;*/
+    padding: 20px 200px 130px 200px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #f9faf8;
+}
+
+.hero-left p,
+.navigation .links .link a {
+    font-size: 18px;
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+.navigation .links .link {
+    list-style-type: none;
+}
+
+.navigation .logo {
+    font-size: 24px;
+    color: #f9faf8;
+    font-weight: 700;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 140px;
+}
+
+.navigation .links {
+    display: flex;
+    gap: 28px;
+}
+/*end navigation*/
+/*-------------------------*/
+/* hero */
+.hero {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.hero-left {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 440px;
+    /*background-color: red;*/
+    /*width: 420px;*/
+}
+
+.hero-left button {
+    background-color: #3882f6;
+    font-size: 16px;
+    color: #f9faf8;
+    font-weight: bold;
+    margin-top: 16px;
+    padding: 8px 26px;
+    border: none;
+    border-radius: 8px;
+}
+
+.hero-img {
+    /*width: 920px;*/
+    height: 240px;
+    background-color: #6c727d;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 920px;
+    /*extra*/
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9faf8;
+}
+/*end hero*/
+/*--------------------------------------------------------*/
