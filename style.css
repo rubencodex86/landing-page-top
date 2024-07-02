@@ -6,79 +6,98 @@ html {
     font-style: normal;
 }
 
-/* this remove the (white) top margin that was still
-appearing after apply this style to body instead of '*' */
+/*------------------------------------*/
+
+/*---resets---*/
+/*page margins*/
 * {
     margin: 0;
     padding: 0;
 }
-/*--------------------------------------------------------*/
 
-/* top section */
-/*navigation*/
-.section-top {
-    box-sizing: border-box;
-    background: #1f2937;
-    /*height: 530px;*/
-    padding: 20px 300px 130px 300px;
-    /*padding: 20px 440px 130px 440px;*/
-}
-
-.hero-title {
-    font-size: 48px;
-    font-weight: 900;
-    color: #f9faf8;
-}
-
-.hero-left p,
-.navigation .links .link a {
-    font-size: 18px;
-    color: #e5e7eb;
-    text-decoration: none;
-}
-
+/*list bullets*/
 li {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+/*------------------------------------*/
+
+/*---hero and header section---*/
+
+/*background*/
+.section-top {
+    box-sizing: border-box;
+    background: #1f2937;
+    padding: 20px 300px 130px 300px;
+}
+
+/*navigation and hero*/
+.navigation,
+.navigation .links,
+.hero,
+.hero-img {
+    display: flex;
+}
+
+.navigation .logo,
+.hero-title,
+.hero-left button,
+.hero-img {
+    color: #f9faf8;
+}
+
+.hero-left p,
+.navigation .links .link a
+.hero-img {
+    font-size: 18px;
+}
+
+.hero-left p,
+.navigation .links .link a {
+    color: #e5e7eb;
+}
+
+.hero-left,
+.hero-img {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
 .navigation .logo {
     font-size: 24px;
-    color: #f9faf8;
     font-weight: 700;
 }
 
 .navigation {
-    display: flex;
     justify-content: space-between;
     margin-bottom: 140px;
 }
 
 .navigation .links {
-    display: flex;
     gap: 28px;
 }
-/*end navigation*/
-/*-------------------------*/
-/* hero */
+
 .hero {
-    display: flex;
     gap: 50px;
     flex-wrap: wrap;
 }
 
+.hero-title {
+    font-size: 48px;
+    font-weight: 900;
+}
+
 .hero-left {
-    /*flex: 1;*/ /*same as flex-basis: 0*/
-    /*width: 420px;*/ /*flex-basis works the same way*/
-    flex-grow: 1;
-    flex-shrink: 1;
     flex-basis: 440px;
-    /*background-color: red;*/ /*testing position purpose (highlight)*/
 }
 
 .hero-left button {
     background-color: #3882f6;
     font-size: 16px;
-    color: #f9faf8;
     font-weight: bold;
     margin-top: 16px;
     padding: 8px 26px;
@@ -87,35 +106,46 @@ li {
 }
 
 .hero-img {
-    /*width: 920px;*/ /*flex-basis works the same way*/
     height: 240px;
     background-color: #6c727d;
-    /*flex: 1;*/ /*same as flex-basis: 0*/
-    flex-grow: 1;
-    flex-shrink: 1;
     flex-basis: 700px;
     /*extra*/
-    font-size: 18px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    color: #f9faf8;
 }
-/*end hero*/
-/* end top section */
-/*--------------------------------------------------------*/
 
-/* middle section (up) */
+/*------------------------------------*/
 
-/*new try*/
-.info-header-section {
-    margin-top: 60px;
+/*---information section---*/
+
+.info-header-section,
+.info-header-content,
+.info-block {
     display: flex;
     flex-wrap: wrap;
+}
+
+.info-header-section,
+.info-block {
     flex-direction: column;
     align-items: center;
 }
 
+
+/*base*/
+.info-header-section {
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+
+/*title*/
+#information-header-txt {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 60px;
+}
+
+/*content*/
 .info-img {
     width: 175px;
     height: 175px;
@@ -123,24 +153,12 @@ li {
     border-radius: 16px;
 }
 
-#information-header-txt {
-    font-size: 36px;
-    font-weight: 900;
-    margin-bottom: 60px;
-}
-
-
 .info-header-content {
-    display: flex;
-    flex-wrap: wrap;
     gap: 75px;
 }
 
 .info-block {
     width: 175px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .info-block p {
@@ -150,7 +168,10 @@ li {
     color:#646D79;
 }
 
-/*quote section*/
+/*------------------------------------*/
+
+/*---quote section---*/
+
 .quote-section {
     box-sizing: border-box;
     margin-top: 120px;
@@ -172,7 +193,9 @@ li {
     color: #1F2937;
 }
 
-/*sign up section*/
+/*------------------------------------*/
+
+/*---sign up section---*/
 
 .product-signup-section {
     box-sizing: border-box;
@@ -211,7 +234,9 @@ li {
     border-radius: 8px;
 }
 
-/*footer*/
+/*------------------------------------*/
+
+/*---footer---*/
 
 .footer {
     display: flex;
@@ -222,3 +247,4 @@ li {
     font-size: 18px;
 }
 
+/*------------------------------------*/
